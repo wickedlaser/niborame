@@ -93,3 +93,8 @@ figma : https://www.figma.com/design/EjXEEm7jNDLPaOGNtQ7qnb/%E7%84%A1%E9%A1%8C?m
 - [x] コメント閲覧機能（未ログインでも閲覧可能）
 - [x] 星評価閲覧機能（未ログインでも閲覧可能）
 - [x] 問い合わせフォーム機能（未ログインでも利用可能）
+
+## ER図
+https://i.gyazo.com/125ada794b11a33bb08df24f794c64ce.png
+
+[![Image from Gyazo](https://i.gyazo.com/125ada794b11a33bb08df24f794c64ce.png)](https://gyazo.com/125ada794b11a33bb08df24f794c64ce)

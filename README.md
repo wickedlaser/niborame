@@ -57,13 +57,13 @@ MVPリリースとして考えているのは、トップページの作成。�
 「一般的なCRUD以外の実装予定の機能についてそれぞれどのようなイメージ(使用するAPIや)で実装する予定なのか現状考えているもので良いので教えて下さい。」
 
 開発環境: Docker　
-フレームワーク: Ruby on Rails,bootstrap,jQuery
+フレームワーク: Ruby on Rails,bootstrap
 データベース: PostgreSQL　
 API:Google Maps JavaScript API,Google Places API
-認証・認可: Devise　
+認証・認可: Devise,Cancancan
 画像アップロード: Active Storage
 バージョン管理: Git & GitHub
-デプロイ: Heroku
+デプロイ: Render
 
 ### 画面遷移図
 figma : https://www.figma.com/design/EjXEEm7jNDLPaOGNtQ7qnb/%E7%84%A1%E9%A1%8C?m=dev&node-id=0-1&t=9BmL2F3KcbtnC7ML-1
@@ -71,18 +71,13 @@ figma : https://www.figma.com/design/EjXEEm7jNDLPaOGNtQ7qnb/%E7%84%A1%E9%A1%8C?m
 ### READMEに記載した機能
 - [x] ユーザー登録機能
 - [x] ログイン機能
-- [x] 管理画面記事投稿機能（画像投稿含む）
 - [x] 記事閲覧機能（未ログインでも閲覧可能）
-- [x] 管理画面記事編集機能
-- [x] 管理画面記事削除機能
-- [x] 管理画面画像添付機能
+- [x] 記事投稿機能
 - [x] コメント投稿機能
 - [x] コメント閲覧機能（未ログインでも閲覧可能）
 - [x] コメント編集機能
-- [x] コメント削除機能
 - [x] タグ投稿機能
 - [x] タグ編集機能
-- [x] タグ削除機能
 - [x] 星評価閲覧機能（未ログインでも閲覧可能）
 - [x] 星評価編集
 - [x] 問い合わせフォーム機能（未ログインでも閲覧可能）

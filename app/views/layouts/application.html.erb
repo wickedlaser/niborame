@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>煮干ラーメン屋リスト</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* 全体のスタイル */
+    body {
+      background-color: #f1f1f1; /* ページの背景色をライトグレーに設定 */
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* ヘッダーのスタイル */
+    .navbar {
+      background-color: #333; /* ダークグレーの背景色 */
+      color: #fff; /* テキストの色を白に設定 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem 1rem;
+    }
+
+    .navbar-brand, .nav-link {
+      color: #fff !important; /* ナビゲーションリンクの色を白に設定 */
+    }
+
+    .navbar-brand:hover, .nav-link:hover {
+      color: #ccc !important; /* ホバー時の色をライトグレーに設定 */
+    }
+
+    /* フッターのスタイル */
+    .footer {
+      padding: 20px 0;
+      background-color: #333; /* フッターの背景色もダークグレーに設定 */
+      color: #fff; /* フッターテキストの色を白に設定 */
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer a {
+      color: #ccc; /* フッターリンクの色をライトグレーに設定 */
+    }
+
+    .footer a:hover {
+      color: #fff; /* フッターリンクのホバー時の色を白に設定 */
+    }
+
+    /* カードのスタイル */
+    .card {
+      transition: transform 0.2s;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    /* タイトルとテキストのスタイル */
+    .card-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* 区切り線のスタイル */
+    .separator {
+      border-top: 1px solid #dee2e6;
+      margin: 0.5rem 0;
+    }
+
+    /* タグのスタイル */
+    .tag {
+      font-size: 0.875rem;
+      color: #fff;
+      margin-top: 1rem;
+    }
+
+    /* カスタムボタンのスタイル */
+    .btn-custom {
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: white;
+    }
+    .btn-custom:hover {
+      background-color: #5a6268;
+      border-color: #545b62;
+    }
+
+    /* フィルターボタンのスタイル */
+    .filter-buttons {
+      margin-bottom: 20px;
+    }
+    .filter-button {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">煮干ラーメン</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">ホーム</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">店舗一覧</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <%= yield %>
+  </div>
+
+  <!-- フッター -->
+  <footer class="text-center text-lg-start footer">
+    <div class="container p-4">
+      <div class="text-center p-3">
+        © 2024 煮干ラーメン屋:
+        <a class="text-light" href="#">niboramen.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

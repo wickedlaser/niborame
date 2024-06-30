@@ -13,6 +13,9 @@ gem 'tailwindcss-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 gem 'vite_rails'
+gem 'bootstrap', '~> 5.3', '>= 5.3.3'
+gem 'sassc-rails', '~> 2.1'
+gem 'mini_racer'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
@@ -27,6 +30,7 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rubocop-rake'
   gem 'rubocop-rspec'
+  gem 'faker', require: false
 end
 
 group :development do

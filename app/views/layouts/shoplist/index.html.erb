@@ -1,0 +1,20 @@
+<!-- app/views/shoplist/index.html.erb -->
+
+<div class="container mt-4">
+  <h1 class="mb-4">Ramen Shops</h1>
+
+  <div class="row">
+    <% @ramen_shops.each do |ramen_shop| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="<%= ramen_shop.image_url %>" class="card-img-top" alt="<%= ramen_shop.name %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= ramen_shop.name %></h5>
+            <p class="card-text"><%= ramen_shop.description %></p>
+            <a href="<%= ramen_shop_path(ramen_shop) %>" class="btn btn-primary">Details</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

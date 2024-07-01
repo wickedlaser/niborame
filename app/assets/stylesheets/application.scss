@@ -1,0 +1,24 @@
+// Bootstrap CSSをCDN経由で読み込む
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css');
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: #f8f9fa;
+}

@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <h3 class="mb-4 text-center">煮干ラーメン屋リスト</h3>
+
+  <!-- フィルターボタンの追加 -->
+  <div class="filter-buttons text-center">
+    <span class="me-3">ジャンル:</span>
+    <button class="btn btn-outline-primary filter-button" data-ramen-genre="濃厚">濃厚</button>
+    <button class="btn btn-outline-primary filter-button" data-ramen-genre="淡麗">淡麗</button>
+    <button class="btn btn-outline-primary filter-button" data-ramen-genre="つけ麺">つけ麺</button>
+    <button class="btn btn-outline-primary filter-button" data-ramen-genre="汁なし">汁なし</button>
+    <button class="btn btn-outline-primary filter-button" data-ramen-genre="all">すべて</button>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-3">
+    <% @texts.each do |text| %>
+      <div class="col">
+        <div class="card h-100" data-ramen-genre="<%= text.genre %>">
+          <%= image_tag "https://picsum.photos/300/200", class: "card-img-top", alt: "ラーメンの画像" %>
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title"><%= text.title %></h5>
+              <div class="separator"></div>
+              <p class="card-text"><%= text.content %></p>
+              <span class="tag badge bg-primary text-white"><%= text.genre %></span>
+            </div>
+            <%= link_to '詳細を見る', shoplist_path(text.id), class: "btn btn-custom mt-3" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- フィルタリング機能の追加 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const cards = document.querySelectorAll(".card");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const genre = button.getAttribute("data-ramen-genre");
+
+        cards.forEach(card => {
+          if (genre === "all" || card.getAttribute("data-ramen-genre").includes(genre)) {
+            card.parentElement.style.display = "block";
+          } else {
+            card.parentElement.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>

@@ -23,7 +23,7 @@
               <p class="card-text"><%= text.content %></p>
               <span class="tag badge bg-primary text-white"><%= text.genre %></span>
             </div>
-            <a href="#" class="btn btn-custom mt-3">詳細を見る</a>
+            <%= link_to '詳細を見る', shoplist_path(text.id), class: "btn btn-custom mt-3" %>
           </div>
         </div>
       </div>

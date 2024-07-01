@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shoplist, only: [:index, :show]
   root 'pages#index'
 
   get 'pages/index'

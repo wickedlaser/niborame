@@ -2037,3 +2037,307 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 11074)
 
 
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 172.21.0.1 at 2024-07-01 17:54:41 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1065)
+Completed 200 OK in 204ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 296583)
+
+
+Started GET "/" for 172.21.0.1 at 2024-07-01 18:04:49 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 507)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 861)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 12422)
+
+
+Started GET "/" for 172.21.0.1 at 2024-07-01 18:07:30 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1030)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1384)
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 12944)
+
+
+Started GET "/shoplist/Id%20molestiae%20unde%20aspernatur." for 172.21.0.1 at 2024-07-01 18:07:32 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/shoplist/Id%20molestiae%20unde%20aspernatur."):
+  
+Started GET "/" for 172.21.0.1 at 2024-07-01 18:10:18 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1164)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 13010)
+
+
+Started GET "/shoplist/730bd59c-cd1b-44cf-b01f-38b9aff64f49" for 172.21.0.1 at 2024-07-01 18:10:20 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"730bd59c-cd1b-44cf-b01f-38b9aff64f49"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 539)
+
+
+  
+NoMethodError (undefined method `find' for nil):
+  
+app/controllers/shoplist_controller.rb:14:in `show'
+Started GET "/" for 172.21.0.1 at 2024-07-01 18:16:28 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 808)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1162)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 13100)
+
+
+Started GET "/shoplist/769b456b-9c26-4887-b726-4c155bc9594d" for 172.21.0.1 at 2024-07-01 18:16:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"769b456b-9c26-4887-b726-4c155bc9594d"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 2133)
+
+
+Started GET "/" for 172.21.0.1 at 2024-07-01 18:16:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 501)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 596)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 12125)
+
+
+Started GET "/shoplist/89e1c53e-7404-4e84-a5b2-4ae090d1db64" for 172.21.0.1 at 2024-07-01 18:16:31 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"89e1c53e-7404-4e84-a5b2-4ae090d1db64"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 1008)
+
+
+Started GET "/" for 172.21.0.1 at 2024-07-01 18:16:31 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 501)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 596)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 12123)
+
+
+Started GET "/shoplist/90c9615e-e103-434f-b7be-95d53e8db8dd" for 172.21.0.1 at 2024-07-01 18:16:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"90c9615e-e103-434f-b7be-95d53e8db8dd"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 913)
+
+
+Started GET "/" for 172.21.0.1 at 2024-07-01 18:16:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 501)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 596)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 12234)
+
+
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 172.22.0.1 at 2024-07-01 18:19:15 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1399)
+
+
+  
+NameError (uninitialized constant PagesController::Faker):
+  
+app/controllers/pages_controller.rb:6:in `block in index'
+app/controllers/pages_controller.rb:3:in `each'
+app/controllers/pages_controller.rb:3:in `map'
+app/controllers/pages_controller.rb:3:in `index'
+Started GET "/" for 172.22.0.1 at 2024-07-01 18:19:17 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 516)
+
+
+  
+NameError (uninitialized constant PagesController::Faker):
+  
+app/controllers/pages_controller.rb:6:in `block in index'
+app/controllers/pages_controller.rb:3:in `each'
+app/controllers/pages_controller.rb:3:in `map'
+app/controllers/pages_controller.rb:3:in `index'
+Started GET "/" for 172.22.0.1 at 2024-07-01 18:20:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 929)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1297)
+Completed 200 OK in 167ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 295039)
+
+
+Started GET "/shoplist/50b4237c-8ba6-4746-af98-f8c778522d5f" for 172.22.0.1 at 2024-07-01 18:20:38 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"50b4237c-8ba6-4746-af98-f8c778522d5f"}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 282)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 2137)
+
+
+Started GET "/shoplist/50b4237c-8ba6-4746-af98-f8c778522d5f" for 172.22.0.1 at 2024-07-01 18:33:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"50b4237c-8ba6-4746-af98-f8c778522d5f"}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 230)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 584)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 3134)
+
+
+Started GET "/shoplist/50b4237c-8ba6-4746-af98-f8c778522d5f" for 172.22.0.1 at 2024-07-01 18:39:10 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"50b4237c-8ba6-4746-af98-f8c778522d5f"}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 271)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 625)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 3027)
+
+
+Started GET "/" for 172.22.0.1 at 2024-07-01 18:39:34 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 802)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 897)
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 12709)
+
+
+Started GET "/shoplist/cb3d10fd-307d-479a-a594-41d0da877657" for 172.22.0.1 at 2024-07-01 18:39:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"cb3d10fd-307d-479a-a594-41d0da877657"}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 107)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 1773)
+
+
+Started GET "/shoplist/cb3d10fd-307d-479a-a594-41d0da877657" for 172.22.0.1 at 2024-07-01 18:45:21 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"cb3d10fd-307d-479a-a594-41d0da877657"}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 254)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 608)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 3001)
+
+
+Started GET "/" for 172.22.0.1 at 2024-07-01 18:58:11 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 802)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 897)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 12657)
+
+
+Started GET "/shoplist/22df4073-ef8e-451f-b8e5-2b3154d33495" for 172.22.0.1 at 2024-07-01 18:58:19 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"22df4073-ef8e-451f-b8e5-2b3154d33495"}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | Allocations: 107)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1701)
+
+
+Started GET "/" for 172.22.0.1 at 2024-07-01 18:58:28 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 501)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 596)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 12173)
+
+
+Started GET "/shoplist/537b3049-b0b6-431b-bbaa-582e5f4f2add" for 172.22.0.1 at 2024-07-01 19:08:25 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"537b3049-b0b6-431b-bbaa-582e5f4f2add"}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 115)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1701)
+
+
+Started GET "/" for 172.22.0.1 at 2024-07-01 23:50:59 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 501)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 596)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 12138)
+
+
+Started GET "/shoplist/6af5768d-2281-4558-a4e9-83e012146b63" for 172.22.0.1 at 2024-07-01 23:51:01 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"6af5768d-2281-4558-a4e9-83e012146b63"}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 107)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1762)
+
+

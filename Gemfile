@@ -17,9 +17,12 @@ gem 'bootstrap', '~> 5.3', '>= 5.3.3'
 gem 'sassc-rails', '~> 2.1'
 gem 'mini_racer'
 
+gem 'sidekiq'
+gem 'google_places'
+
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
-  gem 'dotenv'
+  gem 'dotenv-rails'
   gem 'erb_lint'
   gem 'factory_bot_rails'
   gem 'pry-rails'
@@ -41,5 +44,3 @@ end
 group :test do
   gem 'capybara-playwright-driver'
 end
-
-gem 'sidekiq'

@@ -1,13 +1,10 @@
 class ShoplistController < ApplicationController
   def index
-    @texts = session[:texts].map { |text| OpenStruct.new(text) }
+    @shops = RamenShop.all
   end
 
   def show
-    texts = session[:texts].map { |text| OpenStruct.new(text) }
-    @shop = texts.find { |text| text.id == params[:id] }
-    if @shop.nil?
-      redirect_to root_path, alert: "店舗が見つかりません"
-    end
+    @shop = RamenShop.find_by(id: params[:id])
+    redirect_to root_path, alert: "店舗が見つかりません" if @shop.nil?
   end
 end

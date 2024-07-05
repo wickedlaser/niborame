@@ -22,8 +22,14 @@ RUN bundle install
 # アプリケーションのソースをコピー
 COPY . /app
 
+# プリコンパイルの実行
+RUN bundle exec rails assets:precompile
+
 # Dockerイメージのエントリーポイントを指定
 ENTRYPOINT ["./entrypoint.sh"]
 
 # サービスを実行するポートを指定
 EXPOSE 3000
+
+# デフォルトコマンドを指定
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]

@@ -6227,3 +6227,260 @@ Processing by ShoplistController#show as HTML
 Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1962)
 
 
+Started GET "/shoplist/1" for 192.168.48.1 at 2024-07-06 01:57:19 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRamenShop Load (0.2ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shoplist_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 0.3ms | Allocations: 121)
+Completed 200 OK in 22ms (Views: 0.7ms | ActiveRecord: 8.2ms | Allocations: 3681)
+
+
+Started GET "/" for 192.168.48.1 at 2024-07-06 01:57:22 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mRamenShop Load (0.6ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/views/pages/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  Rendered pages/index.html.erb within layouts/application (Duration: 31.8ms | Allocations: 8096)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 8191)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 2.7ms | Allocations: 8423)
+
+
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 172.21.0.1 at 2024-07-06 01:58:23 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+Started GET "/" for 172.21.0.1 at 2024-07-06 01:58:23 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mRamenShop Load (1.1ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/views/pages/index.html.erb:44
+  [1m[36mRamenShop Load (0.7ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/views/pages/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  Rendered pages/index.html.erb within layouts/application (Duration: 88.7ms | Allocations: 46562)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  Rendered pages/index.html.erb within layouts/application (Duration: 86.3ms | Allocations: 44928)
+  Rendered layout layouts/application.html.erb (Duration: 90.6ms | Allocations: 47468)
+  Rendered layout layouts/application.html.erb (Duration: 86.7ms | Allocations: 45070)
+Completed 200 OK in 348ms (Views: 74.9ms | ActiveRecord: 19.9ms | Allocations: 340777)
+
+
+Completed 200 OK in 88ms (Views: 64.6ms | ActiveRecord: 22.9ms | Allocations: 45438)
+
+
+Started GET "/shoplist/1" for 172.21.0.1 at 2024-07-06 01:58:24 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shoplist_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 302)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 397)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 1964)
+
+
+Started GET "/" for 172.21.0.1 at 2024-07-06 01:58:25 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mRamenShop Load (0.6ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/views/pages/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  Rendered pages/index.html.erb within layouts/application (Duration: 39.5ms | Allocations: 8100)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 8195)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 2.6ms | Allocations: 8435)
+
+
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 172.22.0.1 at 2024-07-06 02:47:27 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mRamenShop Load (2.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/views/pages/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  Rendered pages/index.html.erb within layouts/application (Duration: 126.3ms | Allocations: 34666)
+  Rendered layout layouts/application.html.erb (Duration: 127.3ms | Allocations: 35064)
+Completed 200 OK in 586ms (Views: 118.3ms | ActiveRecord: 19.5ms | Allocations: 327188)
+
+
+Started GET "/shoplist/1" for 172.22.0.1 at 2024-07-06 02:47:29 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRamenShop Load (0.5ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shoplist_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 302)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 397)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 1966)
+
+
+Started GET "/" for 172.22.0.1 at 2024-07-06 02:47:31 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mRamenShop Load (0.7ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/views/pages/index.html.erb:44
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "RamenShop"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/index.html.erb:47
+  Rendered pages/index.html.erb within layouts/application (Duration: 24.3ms | Allocations: 8100)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 8195)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 3.9ms | Allocations: 8435)
+
+

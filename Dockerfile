@@ -4,7 +4,7 @@ FROM ruby:3.3-slim-bullseye
 # パッケージのインストール
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libpq-dev libvips pkg-config curl && \
-    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get install -y nodejs && \
     npm install -g yarn
 
@@ -25,7 +25,8 @@ RUN bundle install
 # アプリケーションのソースをコピー
 COPY . /app
 
-# プリコンパイルの実行
+# Yarnのインストールとプリコンパイルの実行
+RUN yarn install --check-files
 RUN bundle exec rails assets:precompile
 
 # Dockerイメージのエントリーポイントを指定

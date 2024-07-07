@@ -30,7 +30,9 @@ RUN yarn install --check-files
 RUN bundle exec rails assets:precompile
 
 # Dockerイメージのエントリーポイントを指定
-ENTRYPOINT ["./entrypoint.sh"]
+COPY bin/docker-entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/docker-entrypoint.sh
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 # サービスを実行するポートを指定
 EXPOSE 3000

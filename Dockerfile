@@ -1,5 +1,3 @@
-# Dockerfile
-
 # ベースイメージを指定
 FROM ruby:3.3-slim-bullseye
 

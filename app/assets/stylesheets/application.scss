@@ -1,8 +1,48 @@
-// Bootstrap CSSをCDN経由で読み込む
-@import url('https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css');
+
+body {
+  background-color: #f1f1f1; /* ページの背景色をライトグレーに設定 */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #444 !important; /* グレーの背景色 */
+  color: #fff !important; /* テキストの色を白に設定 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1rem;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important; /* ナビゲーションリンクの色を白に設定 */
+  padding: 10px 15px; /* パディングを追加 */
+  border-bottom: 2px solid transparent; /* 初期状態のボーダーを透明に */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ccc !important; /* ホバー時の色をライトグレーに設定 */
+  border-bottom: 2px solid #fff !important; /* ホバー時のボーダーを白に設定 */
+}
+
+.footer {
+  padding: 20px 0;
+  background-color: #222 !important; /* フッターの背景色をさらに濃い色に設定 */
+  color: #fff !important; /* フッターテキストの色を白に設定 */
+  text-align: center; /* テキストを中央揃えに設定 */
+}
+
+.footer a {
+  color: #bbb !important; /* フッターリンクの色をライトグレーに設定 */
+}
+
+.footer a:hover {
+  color: #fff !important; /* フッターリンクのホバー時の色を白に設定 */
+}
 
 .card {
   transition: transform 0.2s;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .card:hover {
@@ -12,13 +52,46 @@
 .card-img-top {
   height: 200px;
   object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-.navbar {
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.separator {
+  border-top: 1px solid #dee2e6;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  font-size: 0.875rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.btn-custom {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+.btn-custom:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+.filter-buttons {
   margin-bottom: 20px;
 }
-
-.footer {
-  padding: 20px 0;
-  background-color: #f8f9fa;
+.filter-button {
+  margin-right: 10px;
 }

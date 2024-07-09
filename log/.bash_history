@@ -43,3 +43,39 @@ yarn -v
 yarn add bootstrap
 bundle exec rails assets:precompile
 exit
+rails console
+exit
+rails db:migrate
+exit
+rails db:migrate
+exit
+rails db:seed
+exit
+rails console
+exit
+rails db:reset
+rails db:seed
+rails db:reset
+exit
+rails db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+rails db:create
+rails db:migrate
+rails db:seed
+rails console
+exit
+rails db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+rails db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+rails db:create
+rails db:migrate
+rails db:seed
+rails console
+exit
+rails console
+exit
+rails db:migrate
+exit
+rails db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+rails db:create
+rails db:migrate
+rails db:seed
+exit

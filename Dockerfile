@@ -3,7 +3,10 @@ FROM ruby:3.3-slim-bullseye
 
 # パッケージのインストール
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git libpq-dev libvips pkg-config
+    apt-get install --no-install-recommends -y build-essential git libpq-dev libvips pkg-config curl && \
+    curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install -g yarn
 
 # Bundlerの特定バージョンをインストール
 RUN gem install bundler -v '2.5.6'
@@ -22,8 +25,17 @@ RUN bundle install
 # アプリケーションのソースをコピー
 COPY . /app
 
+# Yarnのインストールとプリコンパイルの実行
+RUN yarn install --check-files
+RUN bundle exec rails assets:precompile
+
 # Dockerイメージのエントリーポイントを指定
-ENTRYPOINT ["./entrypoint.sh"]
+COPY bin/docker-entrypoint /usr/bin/docker-entrypoint
+RUN chmod +x /usr/bin/docker-entrypoint
+ENTRYPOINT ["docker-entrypoint"]
 
 # サービスを実行するポートを指定
 EXPOSE 3000
+
+# デフォルトコマンドを指定
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]

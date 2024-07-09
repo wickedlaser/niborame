@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= @shop.title %> - 店舗詳細</title>
+  <title><%= @shop.name %> - 詳細情報</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
+    body {
+      background-color: #f8f9fa; /* 背景色を淡いグレーに */
+      color: #333;
+    }
     .shop-details {
       margin-top: 20px;
     }
@@ -14,43 +18,78 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 2px solid #ddd;
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
     .shop-header h1 {
       font-size: 2rem;
+      color: #343a40;
     }
     .shop-map {
       height: 400px;
       margin-bottom: 20px;
     }
-    .shop-introduction {
-      border: 1px solid #ccc;
-      padding: 15px;
+    .shop-section {
       margin-bottom: 20px;
-      background-color: #f9f9f9;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+    }
+    .shop-section h5 {
+      margin-bottom: 10px;
+      color: #495057;
+    }
+    .shop-introduction {
+      white-space: pre-wrap; /* 改行を反映する */
+    }
+    .shop-image-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: white;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="shop-details">
-      <div class="shop-header">
-        <h1><%= @shop.title %></h1>
-        <a href="/" class="btn btn-secondary">戻る</a>
+  <div class="container shop-details">
+    <div class="shop-header">
+      <h1><%= @shop.name %></h1>
+      <a href="/" class="btn btn-secondary">ホームに戻る</a>
+    </div>
+    <div class="card">
+      <div class="shop-image-container shop-section">
+        <% if @shop.detail_image_url.present? %>
+          <img src="<%= @shop.detail_image_url %>" class="img-fluid" alt="店舗の画像">
+        <% else %>
+          <p>画像が見つかりませんでした</p>
+        <% end %>
       </div>
-      <div class="shop-map" id="map"></div>
-      <div class="shop-introduction">
-        <h5>店舗紹介</h5>
-        <p><%= @shop.content %></p>
+      <div class="shop-introduction shop-section">
+        <h5>紹介</h5>
+        <p><%= @shop.introduction %></p>
       </div>
-      <p>ジャンル: <%= @shop.genre %></p>
-      <p>住所: <%= @shop.address %></p>
-      <p>営業時間: <%= @shop.business_hours %></p>
+      <div class="shop-genre shop-section">
+        <h5>ジャンル</h5>
+        <p><%= @shop.genre %></p>
+      </div>
+      <div class="shop-address shop-section">
+        <h5>住所</h5>
+        <p><%= @shop.address %></p>
+      </div>
+      <div class="shop-business-hours shop-section">
+        <h5>営業時間</h5>
+        <p><%= @shop.business_hours %></p>
+      </div>
+      <div id="map" class="shop-map shop-section"></div>
     </div>
   </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap" async defer></script>
   <script>
     function initMap() {
       var shopLocation = { lat: <%= @shop.latitude %>, lng: <%= @shop.longitude %> };
@@ -63,7 +102,6 @@
         map: map
       });
     }
-    document.addEventListener("DOMContentLoaded", initMap);
   </script>
 </body>
 </html>

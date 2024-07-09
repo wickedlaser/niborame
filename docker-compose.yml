@@ -4,6 +4,12 @@ x-app: &app
   build:
     context: .
     dockerfile: Dockerfile
+    args:
+      RUBY_VERSION: "3.3"
+      PG_MAJOR: "14"
+      NODE_MAJOR: "20"
+      BUNDLER_VERSION: "2.5.6"
+      YARN_VERSION: "1.22.19"
   environment: &env
     NODE_ENV: ${NODE_ENV:-development}
     RAILS_ENV: ${RAILS_ENV:-development}
@@ -44,7 +50,7 @@ x-backend: &backend
 services:
   runner:
     <<: *backend
-    command: bash -c "bundle exec rails db:create db:migrate && bundle exec rails server -b 0.0.0.0"
+    command: bash -c "bundle exec rails db:create && bundle exec rails db:migrate && bundle exec rails server -b 0.0.0.0"
     ports:
       - "3000:3000"
 

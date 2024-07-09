@@ -19,6 +19,8 @@ gem 'mini_racer'
 
 gem 'sidekiq'
 gem 'google_places'
+gem 'geocoder'
+gem 'google-cloud-vision'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]

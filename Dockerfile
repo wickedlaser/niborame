@@ -1,3 +1,5 @@
+# Dockerfile
+
 # ベースイメージを指定
 FROM ruby:3.3-slim-bullseye
 
@@ -15,11 +17,8 @@ RUN gem install bundler -v '2.5.6'
 RUN mkdir /app
 WORKDIR /app
 
-# GemfileとGemfile.lockをコピー
-COPY Gemfile /app/Gemfile
-COPY Gemfile.lock /app/Gemfile.lock
-
-# Bundle installの実行
+# GemfileとGemfile.lockをコピーし、依存関係をインストール
+COPY Gemfile Gemfile.lock /app/
 RUN bundle install
 
 # アプリケーションのソースをコピー

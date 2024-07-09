@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_02_203912) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_09_033135) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -55,6 +55,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_02_203912) do
     t.string "business_hours"
     t.float "latitude"
     t.float "longitude"
+    t.string "google_place_id"
+    t.string "image_url"
+    t.string "detail_image_url"
   end
 
   create_table "ramen_stores", force: :cascade do |t|

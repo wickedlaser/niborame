@@ -24,7 +24,7 @@ COPY . /app
 
 # Yarnのインストールとプリコンパイルの実行
 RUN yarn install --check-files
-RUN bundle exec rails assets:precompile
+RUN bundle exec rails assets:precompile --trace
 
 # Dockerイメージのエントリーポイントを指定
 COPY bin/docker-entrypoint /usr/bin/docker-entrypoint

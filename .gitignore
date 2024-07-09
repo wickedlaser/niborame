@@ -44,3 +44,8 @@
 !/app/assets/builds/.keep
 log/development.log
 gcloud-key.json
+
+# Ignore bfg cleaner jar file and report
+/bfg-1.14.0.jar
+/niborame.git.bfg-report/
+/niborame.git/

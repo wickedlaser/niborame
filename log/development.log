@@ -13446,3 +13446,17 @@ Processing by ShoplistController#show as HTML
 Completed 200 OK in 788ms (Views: 1.2ms | ActiveRecord: 3.0ms | Allocations: 10592)
 
 
+[dotenv] Set [36mDATABASE_URL[0m, [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_URL[0m, [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mRamenShop Load (0.6ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m

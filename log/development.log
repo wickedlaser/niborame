@@ -13394,3 +13394,221 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.6ms | Allocations: 1557)
 
 
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 192.168.128.1 at 2024-07-09 12:10:35 +0000
+Cannot render console from 192.168.128.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[36mRamenShop Load (0.9ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/controllers/pages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1284)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1667)
+Completed 200 OK in 69ms (Views: 4.9ms | ActiveRecord: 5.8ms | Allocations: 37805)
+
+
+Started GET "/shoplist/6" for 192.168.128.1 at 2024-07-09 12:10:38 +0000
+Cannot render console from 192.168.128.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRamenShop Load (0.2ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/shoplist_controller.rb:9:in `show'
+{"open_now"=>false, "periods"=>[{"close"=>{"day"=>0, "time"=>"1400"}, "open"=>{"day"=>0, "time"=>"1100"}}, {"close"=>{"day"=>1, "time"=>"1400"}, "open"=>{"day"=>1, "time"=>"1100"}}, {"close"=>{"day"=>3, "time"=>"1400"}, "open"=>{"day"=>3, "time"=>"1100"}}, {"close"=>{"day"=>4, "time"=>"1400"}, "open"=>{"day"=>4, "time"=>"1100"}}, {"close"=>{"day"=>4, "time"=>"2100"}, "open"=>{"day"=>4, "time"=>"1800"}}, {"close"=>{"day"=>5, "time"=>"1400"}, "open"=>{"day"=>5, "time"=>"1100"}}, {"close"=>{"day"=>5, "time"=>"2100"}, "open"=>{"day"=>5, "time"=>"1800"}}, {"close"=>{"day"=>6, "time"=>"1400"}, "open"=>{"day"=>6, "time"=>"1100"}}, {"close"=>{"day"=>6, "time"=>"2100"}, "open"=>{"day"=>6, "time"=>"1800"}}], "weekday_text"=>["Monday: 11:00 AM – 2:00 PM", "Tuesday: Closed", "Wednesday: 11:00 AM – 2:00 PM", "Thursday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM", "Friday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM", "Saturday: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM", "Sunday: 11:00 AM – 2:00 PM"]}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoplist_controller.rb:41:in `show'
+  [1m[36mRamenShop Update (1.7ms)[0m  [1m[33mUPDATE "ramen_shops" SET "updated_at" = $1, "business_hours" = $2, "latitude" = $3, "longitude" = $4, "detail_image_url" = $5 WHERE "ramen_shops"."id" = $6[0m  [["updated_at", "2024-07-09 12:10:38.879302"], ["business_hours", "月曜日: 11:00 AM – 2:00 PM\n火曜日: Closed\n水曜日: 11:00 AM – 2:00 PM\n木曜日: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM\n金曜日: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM\n土曜日: 11:00 AM – 2:00 PM, 6:00 – 9:00 PM\n日曜日: 11:00 AM – 2:00 PM"], ["latitude", 34.6991144], ["longitude", 135.6075349], ["detail_image_url", "https://lh3.googleusercontent.com/places/ANXAkqGd2sOm4smmgY-A0rZ-zp6pm5Xgc3GMnM2VzqPDw2tXl2YCqY6nJEObDvKlT8KYRJWDBFwi6uK6EZPaZ5L_OmJONHGlvGkqH-Q=s1600-w800"], ["id", 6]]
+  ↳ app/controllers/shoplist_controller.rb:41:in `show'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoplist_controller.rb:41:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 518)
+Completed 200 OK in 788ms (Views: 1.2ms | ActiveRecord: 3.0ms | Allocations: 10592)
+
+
+[dotenv] Set [36mDATABASE_URL[0m, [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_URL[0m, [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mRamenShop Load (0.6ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+[dotenv] Set [36mDATABASE_URL[0m, [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_URL[0m, [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mDATABASE_URL[0m, [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 192.168.128.1 at 2024-07-09 21:36:06 +0000
+Cannot render console from 192.168.128.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  [1m[36mRamenShop Load (17.9ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/controllers/pages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1033)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1364)
+Completed 200 OK in 31ms (Views: 3.1ms | ActiveRecord: 25.6ms | Allocations: 13061)
+
+
+Started GET "/" for 192.168.128.1 at 2024-07-09 22:04:39 +0000
+Cannot render console from 192.168.128.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  [1m[36mRamenShop Load (18.1ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/controllers/pages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 591)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 689)
+Completed 200 OK in 22ms (Views: 1.5ms | ActiveRecord: 26.8ms | Allocations: 4366)
+
+
+Started GET "/shoplist/4" for 192.168.128.1 at 2024-07-09 22:07:06 +0000
+Cannot render console from 192.168.128.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shoplist_controller.rb:9:in `show'
+{"open_now"=>false, "periods"=>[{"close"=>{"day"=>0, "time"=>"1400"}, "open"=>{"day"=>0, "time"=>"1100"}}, {"close"=>{"day"=>2, "time"=>"1400"}, "open"=>{"day"=>2, "time"=>"1100"}}, {"close"=>{"day"=>3, "time"=>"1400"}, "open"=>{"day"=>3, "time"=>"1100"}}, {"close"=>{"day"=>3, "time"=>"2030"}, "open"=>{"day"=>3, "time"=>"1800"}}, {"close"=>{"day"=>4, "time"=>"1400"}, "open"=>{"day"=>4, "time"=>"1100"}}, {"close"=>{"day"=>5, "time"=>"1400"}, "open"=>{"day"=>5, "time"=>"1100"}}, {"close"=>{"day"=>5, "time"=>"2030"}, "open"=>{"day"=>5, "time"=>"1800"}}, {"close"=>{"day"=>6, "time"=>"1400"}, "open"=>{"day"=>6, "time"=>"1100"}}], "weekday_text"=>["Monday: Closed", "Tuesday: 11:00 AM – 2:00 PM", "Wednesday: 11:00 AM – 2:00 PM, 6:00 – 8:30 PM", "Thursday: 11:00 AM – 2:00 PM", "Friday: 11:00 AM – 2:00 PM, 6:00 – 8:30 PM", "Saturday: 11:00 AM – 2:00 PM", "Sunday: 11:00 AM – 2:00 PM"]}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 502)
+Completed 200 OK in 733ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 6188)
+
+
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRamenShop Load (0.9ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "中華蕎麦福はら"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "NAKAGAWA わず"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.4ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "らーめんセンタートミオ"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.4ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "魚々麺 園"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "煮干らあめん じんべえ"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "麺や而今 大東本店"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "麺屋 いちびり NEXT"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.4ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "中華そば かむら"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.4ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "煮干し中華そば 加藤屋本店"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "加藤屋にぼ次朗 南草津店"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.4ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "セアブラノ神 壬生本店"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.5ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "極汁美麺 umami"], ["LIMIT", 1]]
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 172.22.0.1 at 2024-07-10 01:57:28 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[36mRamenShop Load (0.4ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/controllers/pages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1284)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1667)
+Completed 200 OK in 80ms (Views: 6.1ms | ActiveRecord: 5.9ms | Allocations: 37762)
+
+
+Started GET "/shoplist/4" for 172.22.0.1 at 2024-07-10 01:57:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShoplistController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shoplist_controller.rb:9:in `show'
+{"open_now"=>false, "periods"=>[{"close"=>{"day"=>0, "time"=>"1400"}, "open"=>{"day"=>0, "time"=>"1100"}}, {"close"=>{"day"=>2, "time"=>"1400"}, "open"=>{"day"=>2, "time"=>"1100"}}, {"close"=>{"day"=>3, "time"=>"1400"}, "open"=>{"day"=>3, "time"=>"1100"}}, {"close"=>{"day"=>3, "time"=>"2030"}, "open"=>{"day"=>3, "time"=>"1800"}}, {"close"=>{"day"=>4, "time"=>"1400"}, "open"=>{"day"=>4, "time"=>"1100"}}, {"close"=>{"day"=>5, "time"=>"1400"}, "open"=>{"day"=>5, "time"=>"1100"}}, {"close"=>{"day"=>5, "time"=>"2030"}, "open"=>{"day"=>5, "time"=>"1800"}}, {"close"=>{"day"=>6, "time"=>"1400"}, "open"=>{"day"=>6, "time"=>"1100"}}], "weekday_text"=>["Monday: Closed", "Tuesday: 11:00 AM – 2:00 PM", "Wednesday: 11:00 AM – 2:00 PM, 6:00 – 8:30 PM", "Thursday: 11:00 AM – 2:00 PM", "Friday: 11:00 AM – 2:00 PM, 6:00 – 8:30 PM", "Saturday: 11:00 AM – 2:00 PM", "Sunday: 11:00 AM – 2:00 PM"]}
+  Rendering layout layouts/application.html.erb
+  Rendering shoplist/show.html.erb within layouts/application
+  Rendered shoplist/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 419)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 517)
+Completed 200 OK in 856ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 8434)
+
+
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "中華蕎麦福はら"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "NAKAGAWA わず"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.5ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "らーめんセンタートミオ"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "魚々麺 園"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.4ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "煮干らあめん じんべえ"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "麺や而今 大東本店"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.5ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "麺屋 いちびり NEXT"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.4ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "中華そば かむら"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.2ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "煮干し中華そば 加藤屋本店"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "加藤屋にぼ次朗 南草津店"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.2ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "セアブラノ神 壬生本店"], ["LIMIT", 1]]
+  [1m[36mRamenShop Load (0.3ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops" WHERE "ramen_shops"."name" = $1 LIMIT $2[0m  [["name", "極汁美麺 umami"], ["LIMIT", 1]]
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Set [36mGOOGLE_PLACES_API_KEY[0m, [36mGOOGLE_MAPS_API_KEY[0m, and [36mGOOGLE_CLOUD_VISION_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 172.22.0.1 at 2024-07-10 01:58:50 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[36mRamenShop Load (0.4ms)[0m  [1m[34mSELECT "ramen_shops".* FROM "ramen_shops"[0m
+  ↳ app/controllers/pages_controller.rb:4:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1284)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1667)
+Completed 200 OK in 64ms (Views: 4.3ms | ActiveRecord: 5.7ms | Allocations: 37808)
+
+

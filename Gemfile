@@ -1,32 +1,33 @@
 source 'https://rubygems.org'
 
 ruby '3.3.3'
-gem 'bundler', '2.5.6'
 gem 'bootsnap', require: false
+gem 'bootstrap', '~> 5.3', '>= 5.3.3'
+gem 'bundler', '2.5.6'
 gem 'importmap-rails'
+gem 'mini_racer'
 gem 'pg', '~> 1.1'
 gem 'puma', '>= 5.0'
 gem 'rails', '~> 7.1.3', '>= 7.1.3.2'
+gem 'sassc-rails', '~> 2.1'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'tailwindcss-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 gem 'vite_rails'
-gem 'bootstrap', '~> 5.3', '>= 5.3.3'
-gem 'sassc-rails', '~> 2.1'
-gem 'mini_racer'
 
-gem 'sidekiq'
-gem 'google_places'
 gem 'geocoder'
 gem 'google-cloud-vision'
+gem 'google_places'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
   gem 'dotenv-rails'
   gem 'erb_lint'
   gem 'factory_bot_rails'
+  gem 'faker', require: false
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'rubocop'
@@ -35,7 +36,6 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rubocop-rake'
   gem 'rubocop-rspec'
-  gem 'faker', require: false
 end
 
 group :development do

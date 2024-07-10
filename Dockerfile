@@ -1,5 +1,5 @@
 # ベースイメージを指定
-FROM ruby:3.3-slim-bullseye
+FROM ruby:3.3.3-slim-bullseye
 
 # パッケージのインストール
 RUN apt-get update -qq && \

@@ -56,42 +56,20 @@ shops.each do |shop|
   puts "Processing #{shop[:name]}"
   place_details = fetch_place_details(shop[:name], api_key)
 
-  if place_details
-    address = place_details['formatted_address']
-    latitude = place_details['geometry']['location']['lat']
-    longitude = place_details['geometry']['location']['lng']
-
-    # 詳細ページで使用する画像URLを取得
-    photo_reference = place_details['photos']&.first&.fetch('photo_reference', nil)
-    if photo_reference
-      photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{photo_reference}&key=#{api_key}"
+  ramen_shop = RamenShop.find_or_create_by(name: shop[:name]) do |s|
+    s.address = shop[:address]
+    s.introduction = shop[:introduction]
+    s.genre = shop[:genre]
+    s.image_url = shop[:image_url]
+    if place_details
+      s.latitude = place_details['geometry']['location']['lat']
+      s.longitude = place_details['geometry']['location']['lng']
+      photo_reference = place_details['photos']&.first&.fetch('photo_reference', nil)
+      s.detail_image_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{photo_reference}&key=#{api_key}" if photo_reference
     end
-
-    ramen_shop = RamenShop.create!(
-      name: shop[:name],
-      address:,
-      introduction: shop[:introduction],
-      genre: shop[:genre],
-      latitude:,
-      longitude:,
-      image_url: shop[:image_url],
-      detail_image_url: photo_url # 詳細ページ用の画像URLを保存
-    )
-    puts "#{shop[:name]} created with detail_image_url: #{ramen_shop.detail_image_url}"
-  else
-    # Google Places APIで情報が取得できなかった場合、手動で入力された情報を使用
-    ramen_shop = RamenShop.create!(
-      name: shop[:name],
-      address: shop[:address],
-      introduction: shop[:introduction],
-      genre: shop[:genre],
-      latitude: nil,
-      longitude: nil,
-      image_url: shop[:image_url], # 手動で設定した画像URLを使用
-      detail_image_url: nil
-    )
-    puts "#{shop[:name]} created with manual image_url: #{ramen_shop.image_url}"
   end
+
+  puts "#{shop[:name]} processed with detail_image_url: #{ramen_shop.detail_image_url}"
 end
 
-puts 'Seed data created successfully.'
+puts 'Seed data processed successfully.'

@@ -75,4 +75,6 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
   # 許可するホストを追加
   config.hosts << 'niborame.onrender.com'
+
+  config.hosts << "niborame.fly.dev"
 end

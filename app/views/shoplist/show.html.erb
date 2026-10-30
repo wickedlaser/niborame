@@ -67,7 +67,7 @@
         <% if @shop.detail_image_url.present? %>
           <img src="<%= @shop.detail_image_url %>" class="img-fluid" alt="店舗の画像">
         <% else %>
-          <p>画像が見つかりませんでした</p>
+          <p>詳細画像は未登録です。</p>
         <% end %>
       </div>
       <div class="shop-introduction shop-section">
@@ -80,28 +80,37 @@
       </div>
       <div class="shop-address shop-section">
         <h5>住所</h5>
-        <p><%= @shop.address %></p>
+        <p><%= @display_address %></p>
       </div>
       <div class="shop-business-hours shop-section">
         <h5>営業時間</h5>
-        <p><%= @shop.business_hours %></p>
+        <p class="shop-business-hours__text"><%= @display_business_hours.presence || '営業時間は未登録です。' %></p>
+        <% if @place_details.present? %>
+          <p class="small text-muted">店舗情報: <%= link_to 'Google Maps', @google_maps_url, target: '_blank', rel: 'noopener' %></p>
+        <% end %>
       </div>
-      <div id="map" class="shop-map shop-section"></div>
+      <% if @map_available %>
+        <div id="map" class="shop-map shop-section"></div>
+      <% elsif @display_address.present? %>
+        <div class="shop-section">
+          <h5>地図</h5>
+          <%= link_to 'Googleマップで見る', @google_maps_url, target: "_blank", rel: "noopener" %>
+        </div>
+      <% end %>
     </div>
   </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap" async defer></script>
-  <script>
-    function initMap() {
-      var shopLocation = { lat: <%= @shop.latitude %>, lng: <%= @shop.longitude %> };
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: shopLocation
-      });
-      var marker = new google.maps.Marker({
-        position: shopLocation,
-        map: map
-      });
-    }
-  </script>
+  <% if @map_available %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap" async defer></script>
+    <script>
+      function initMap() {
+        var shopLocation = { lat: <%= @latitude %>, lng: <%= @longitude %> };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: shopLocation
+        });
+        new google.maps.Marker({ position: shopLocation, map: map });
+      }
+    </script>
+  <% end %>
 </body>
 </html>

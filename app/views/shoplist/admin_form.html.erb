@@ -1,0 +1,65 @@
+<div class="mx-auto py-3" style="max-width: 760px;">
+  <h1 class="h3 mb-4"><%= @shop.persisted? ? '店舗情報を編集' : '店舗を追加' %></h1>
+
+  <% if flash[:notice].present? %>
+    <div class="alert alert-success" role="status"><%= flash[:notice] %></div>
+  <% end %>
+
+  <% if @shop.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <p class="fw-bold">入力内容を確認してください。</p>
+      <ul class="mb-0"><% @shop.errors.full_messages.each do |message| %><li><%= message %></li><% end %></ul>
+    </div>
+  <% end %>
+
+  <%= form_with model: @shop, url: @shop.persisted? ? admin_shop_path(@shop) : admin_shops_path do |form| %>
+    <div class="mb-3">
+      <%= form.label :name, '店舗名', class: 'form-label' %>
+      <%= form.text_field :name, class: 'form-control', required: true, maxlength: 255 %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :address, '住所', class: 'form-label' %>
+      <%= form.text_field :address, class: 'form-control', required: true, maxlength: 255 %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :genre, 'ジャンル', class: 'form-label' %>
+      <%= form.select :genre, options_for_select([['未設定', ''], ['濃厚', '濃厚'], ['淡麗', '淡麗'], ['つけ麺', 'つけ麺']], @shop.genre), {}, class: 'form-select' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :introduction, '紹介文', class: 'form-label' %>
+      <%= form.text_area :introduction, class: 'form-control', required: true, rows: 5 %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :business_hours, '営業時間', class: 'form-label' %>
+      <%= form.text_area :business_hours, class: 'form-control', rows: 3 %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :google_place_id, 'Google Place ID（任意）', class: 'form-label' %>
+      <%= form.text_field :google_place_id, class: 'form-control', maxlength: 255, autocomplete: 'off' %>
+      <div class="form-text">設定すると、店舗詳細を開くたびにGoogleから営業時間・住所・位置を取得して表示します。緯度・経度の入力は不要です。取得内容はデータベースに保存しません。</div>
+    </div>
+    <div class="mb-3">
+      <%= form.label :image_url, '一覧画像URL', class: 'form-label' %>
+      <%= form.url_field :image_url, class: 'form-control', maxlength: 2048 %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :image, '一覧画像ファイルをアップロード', class: 'form-label' %>
+      <%= form.file_field :image, class: 'form-control', accept: 'image/jpeg,image/png,image/webp,image/gif' %>
+      <div class="form-text">JPEG・PNG・WebP・GIF、5MBまで。ImgurのアルバムURLではなく、掲載権利のある画像ファイルを選んでください。</div>
+      <% if @shop.image.attached? %>
+        <div class="d-flex flex-wrap align-items-start gap-3 mt-2">
+          <%= image_tag @shop.image, alt: "#{@shop.name}の現在の一覧画像", style: 'max-width: 240px; max-height: 160px; object-fit: cover;' %>
+          <%= button_to 'アップロード画像を削除', remove_image_admin_shop_path(@shop), method: :delete, class: 'btn btn-outline-danger', form: { onsubmit: "return confirm('アップロードした一覧画像を削除しますか？');" } %>
+        </div>
+      <% end %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :detail_image_url, '詳細画像URL（任意）', class: 'form-label' %>
+      <%= form.url_field :detail_image_url, class: 'form-control', maxlength: 2048 %>
+    </div>
+    <div class="d-flex gap-2">
+      <%= form.submit(@shop.persisted? ? '変更を保存' : '店舗を追加', class: 'btn btn-search') %>
+      <%= link_to '戻る', admin_shops_path, class: 'btn btn-outline-secondary' %>
+    </div>
+  <% end %>
+</div>

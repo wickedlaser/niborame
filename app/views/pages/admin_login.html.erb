@@ -1,0 +1,28 @@
+<div class="mx-auto py-4" style="max-width: 480px;">
+  <h1 class="h3 mb-3">管理者ログイン</h1>
+  <p class="text-muted">店舗情報を管理するためのログインです。</p>
+
+  <% if flash[:alert].present? %>
+    <div class="alert alert-warning" role="alert"><%= flash[:alert] %></div>
+  <% end %>
+  <% if flash[:notice].present? %>
+    <div class="alert alert-success" role="status"><%= flash[:notice] %></div>
+  <% end %>
+  <% unless @admin_configured %>
+    <div class="alert alert-info" role="status">
+      管理者認証情報が未設定です。環境変数 <code>ADMIN_USERNAME</code> と <code>ADMIN_PASSWORD</code> を設定してアプリを再起動してください。
+    </div>
+  <% end %>
+
+  <%= form_with url: admin_login_path, method: :post do |form| %>
+    <div class="mb-3">
+      <%= form.label :username, 'ユーザー名', class: 'form-label' %>
+      <%= form.text_field :username, class: 'form-control', required: true, autocomplete: 'username', disabled: !@admin_configured %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :password, 'パスワード', class: 'form-label' %>
+      <%= form.password_field :password, class: 'form-control', required: true, autocomplete: 'current-password', disabled: !@admin_configured %>
+    </div>
+    <%= form.submit 'ログイン', class: 'btn btn-search', disabled: !@admin_configured %>
+  <% end %>
+</div>

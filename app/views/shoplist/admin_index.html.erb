@@ -1,0 +1,43 @@
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+  <div>
+    <h1 class="h3 mb-1">店舗管理</h1>
+    <p class="text-muted mb-0"><%= @shops.size %> 店舗</p>
+  </div>
+  <div class="d-flex gap-2">
+    <%= link_to '公開ページを見る', shoplist_index_path, class: 'btn btn-outline-secondary' %>
+    <%= link_to '店舗を追加', new_admin_shop_path, class: 'btn btn-search' %>
+    <%= button_to 'ログアウト', admin_logout_path, method: :delete, class: 'btn btn-outline-secondary' %>
+  </div>
+</div>
+
+<% if flash[:notice].present? %>
+  <div class="alert alert-success" role="status"><%= flash[:notice] %></div>
+<% end %>
+
+<div class="table-responsive">
+  <table class="table table-hover align-middle">
+    <thead>
+      <tr>
+        <th scope="col">店舗名</th>
+        <th scope="col">住所</th>
+        <th scope="col">ジャンル</th>
+        <th scope="col">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @shops.each do |shop| %>
+        <tr>
+          <th scope="row"><%= shop.name %></th>
+          <td><%= shop.address %></td>
+          <td><%= shop.genre.presence || '未設定' %></td>
+          <td>
+            <div class="d-flex gap-2">
+              <%= link_to '編集', edit_admin_shop_path(shop), class: 'btn btn-sm btn-outline-secondary' %>
+              <%= button_to '削除', admin_shop_path(shop), method: :delete, class: 'btn btn-sm btn-outline-danger', form: { onsubmit: "return confirm('この店舗を削除しますか？');" } %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -76,20 +76,21 @@
       <label for="genre-filter" class="form-label">ジャンルで絞り込み</label>
       <select id="genre-filter" class="form-select">
         <option value="">全て</option>
-        <option value="濃厚">濃厚</option>
-        <option value="淡麗">淡麗</option>
-        <option value="つけ麺">つけ麺</option>
-        <option value="汁なし">汁なし</option>
+        <% @genres.each do |genre| %>
+          <option value="<%= genre %>"><%= genre %></option>
+        <% end %>
       </select>
     </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="shops-container">
       <% @shops.each do |shop| %>
         <div class="col shop-card" data-genre="<%= shop.genre %>">
           <div class="card h-100">
-            <% if shop.image_url.present? %>
-              <%= image_tag shop.image_url, class: "card-img-top", alt: "ラーメンの画像" %>
+            <% if shop.image.attached? %>
+              <%= image_tag shop.image, class: "card-img-top", alt: "#{shop.name}の画像", loading: "lazy" %>
+            <% elsif shop.image_url.present? %>
+              <%= image_tag shop.image_url, class: "card-img-top", alt: "#{shop.name}の画像", loading: "lazy" %>
             <% else %>
-              <%= image_tag "https://picsum.photos/300/200", class: "card-img-top", alt: "画像が見つかりません" %>
+              <div class="card-img-top d-flex align-items-center justify-content-center bg-light text-muted">画像未登録</div>
             <% end %>
             <div class="card-body d-flex flex-column justify-content-between">
               <div>

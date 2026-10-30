@@ -1,10 +1,10 @@
 # ベースイメージを指定
-FROM ruby:3.3.3-slim-bullseye
+FROM ruby:3.3.3-slim-bookworm
 
 # パッケージのインストール
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libpq-dev libvips pkg-config curl && \
-    curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_22.x | bash - && \
     apt-get install -y nodejs && \
     npm install -g yarn
 

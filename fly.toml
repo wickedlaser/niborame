@@ -38,6 +38,7 @@ console_command = '/rails/bin/rails console'
 
     [checks.status.headers]
       X-Forwarded-Proto = 'https'
+      Host = 'niborame.fly.dev'
 
 [[vm]]
   memory = '1gb'

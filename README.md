@@ -20,11 +20,16 @@
 
 ## 技術スタック
 
-- Ruby 3.3.3 / Ruby on Rails 7.1
-- PostgreSQL
-- Bootstrap 5
-- Docker Compose
-- Fly.io
+- **言語・フレームワーク:** Ruby 3.3.3、Ruby on Rails 7.1
+- **データベース:** PostgreSQL
+- **フロントエンド:** HTML、SCSS、JavaScript、Bootstrap 5、Vite
+- **画像管理:** Active Storage、Fly.io Tigris
+- **外部API:** Google Maps JavaScript API、Google Places API
+- **問い合わせ:** メールアプリを使った送信
+- **コンテナ:** Docker、Docker Compose
+- **テスト:** RSpec
+- **バージョン管理:** Git、GitHub
+- **デプロイ:** Fly.io
 
 ## ローカルで起動する
 

@@ -41,7 +41,7 @@ console_command = '/rails/bin/rails console'
       Host = 'niborame.fly.dev'
 
 [[vm]]
-  memory = '1gb'
+  memory = '256mb'
   cpu_kind = 'shared'
   cpus = 1
 

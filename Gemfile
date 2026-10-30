@@ -16,6 +16,7 @@ gem 'tailwindcss-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 gem 'vite_rails'
+gem 'aws-sdk-s3', '~> 1'
 
 gem 'geocoder'
 gem 'google-cloud-vision'

@@ -41,7 +41,7 @@ docker compose exec runner bin/rails db:seed
 docker compose down
 ```
 
-地図を埋め込む場合は `.env` に `GOOGLE_MAPS_API_KEY` を設定してください。Place IDから情報を取得するにはGoogle CloudでPlaces API (New)を有効にし、課金設定のあるプロジェクトのキーを `GOOGLE_PLACES_API_KEY` に設定してください。Place Detailsの利用量に応じた料金が発生する場合があります。フォーム送信先は `CONTACT_EMAIL` に設定します。Fly.ioでは必要な値をそれぞれアプリのsecretとして設定してください。フォーム送信後は利用者のメールアプリが開き、利用者が内容を確認して送信します。Places APIを公開アプリで使う場合は、Google Maps Platformの利用規約に沿った利用規約・プライバシーポリシーとデータ表示の帰属表記も用意してください。
+地図を埋め込む場合は `.env` に `GOOGLE_MAPS_API_KEY` を設定してください。Place IDから情報を取得するにはGoogle CloudでPlaces API (New)を有効にし、課金設定のあるプロジェクトのキーを `GOOGLE_PLACES_API_KEY` に設定してください。Place Detailsの利用量に応じた料金が発生する場合があります。フォーム送信先は `CONTACT_EMAIL` に設定します。Fly.ioでは必要な値をそれぞれアプリのsecretとして設定してください。フォーム送信後は利用者のメールアプリが開き、利用者が内容を確認して送信します。利用規約 (`/terms`) とプライバシーポリシー (`/privacy`) を公開しています。公開前に運営者情報などの記載内容を確認してください。Google Maps PlatformのAPIキーには、利用APIと利用元に応じた制限を設定してください。
 
 緯度・経度が未登録、または地図キーが未設定の場合は住所からGoogleマップを開くリンクを表示します。
 

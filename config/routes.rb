@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   delete 'admin/shops/:id/image', to: 'admin_shops#remove_image', as: :remove_image_admin_shop
   get 'contact', to: 'contacts#new', as: :contact
   post 'contact', to: 'contacts#create'
+  get 'terms', to: 'pages#terms', as: :terms
+  get 'privacy', to: 'pages#privacy', as: :privacy
   root 'pages#index'
 
   get 'pages/index'

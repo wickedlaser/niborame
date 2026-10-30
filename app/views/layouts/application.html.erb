@@ -79,8 +79,13 @@
   <footer class="text-center text-lg-start footer">
     <div class="container p-4">
       <div class="text-center p-3">
-        © 2024 煮干ラーメン屋:
-        <a class="text-light" href="#">niboramen.com</a>
+        © 2026 煮干しラーメン店検索アプリ
+        <span class="mx-2">|</span>
+        <%= link_to '利用規約', terms_path, class: 'text-light' %>
+        <span class="mx-2">|</span>
+        <%= link_to 'プライバシーポリシー', privacy_path, class: 'text-light' %>
+        <span class="mx-2">|</span>
+        <%= link_to 'お問い合わせ', contact_path, class: 'text-light' %>
         <span class="mx-2">|</span>
         <%= link_to '管理者ログイン', admin_login_path, class: 'text-light' %>
       </div>

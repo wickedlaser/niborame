@@ -24,7 +24,8 @@ Rails.application.configure do
   # config.public_file_server.enabled = false
 
   # Compress CSS using a preprocessor.
-  # config.assets.css_compressor = :sass
+  # Tailwind emits modern CSS color syntax that the SassC compressor cannot parse.
+  config.assets.css_compressor = nil
 
   # Do not fall back to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false

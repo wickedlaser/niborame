@@ -15,6 +15,10 @@ RUN gem install bundler -v '2.5.6'
 RUN mkdir /app
 WORKDIR /app
 
+# Build assets in the same environment used by Fly.io.
+ENV RAILS_ENV=production \
+    NODE_ENV=production
+
 # GemfileとGemfile.lockをコピー
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
@@ -27,7 +31,7 @@ COPY . /app
 
 # Yarnのインストールとプリコンパイルの実行
 RUN yarn install --check-files
-RUN bundle exec rails assets:precompile
+RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
 
 # Dockerイメージのエントリーポイントを指定
 COPY bin/docker-entrypoint /usr/bin/docker-entrypoint

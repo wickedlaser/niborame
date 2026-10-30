@@ -4,6 +4,10 @@ class PagesController < ApplicationController
     @genres = @shops.map(&:genre).compact_blank.uniq.sort
   end
 
+  def terms; end
+
+  def privacy; end
+
   private
 
   def data_check

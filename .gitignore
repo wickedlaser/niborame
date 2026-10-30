@@ -49,3 +49,6 @@ gcloud-key.json
 /bfg-1.14.0.jar
 /niborame.git.bfg-report/
 /niborame.git/
+
+# Ignore Windows NTFS metadata files.
+*:Zone.Identifier

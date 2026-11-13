@@ -30,27 +30,7 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4">
     <% @shops.each do |shop| %>
       <div class="col">
-        <article class="card shop-card h-100">
-          <% if shop.image.attached? %>
-            <%= image_tag shop.image, class: 'shop-card__image', alt: "#{shop.name}の画像", loading: 'lazy' %>
-          <% elsif shop.image_url.present? %>
-            <%= image_tag shop.image_url, class: 'shop-card__image', alt: "#{shop.name}の画像", loading: 'lazy' %>
-          <% else %>
-            <div class="shop-card__placeholder" aria-label="画像未登録">画像未登録</div>
-          <% end %>
-
-          <div class="card-body d-flex flex-column">
-            <div class="shop-card__topline">
-              <% if shop.genre.present? %>
-                <span class="shop-genre"><%= shop.genre %></span>
-              <% end %>
-            </div>
-            <h3 class="shop-card__title"><%= shop.name %></h3>
-            <p class="shop-card__address"><span aria-hidden="true">📍</span> <%= shop.address %></p>
-            <p class="shop-card__description"><%= shop.introduction.presence || '紹介文は準備中です。' %></p>
-            <%= link_to '店舗の詳細を見る', shoplist_path(shop.id), class: 'btn btn-shop-detail mt-auto' %>
-          </div>
-        </article>
+        <%= render 'shoplist/shop_card', shop: shop %>
       </div>
     <% end %>
     <% if @shops.empty? %>

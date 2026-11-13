@@ -11,19 +11,23 @@
 - 店名・住所のキーワード検索とジャンル絞り込みの併用
 - 店舗詳細（紹介文、住所、営業時間、画像）の表示
 - 管理者画面からの店舗画像アップロード（JPEG、PNG、WebP、GIF、5MBまで）
-- Place IDが設定された店舗の営業時間・住所・位置を、詳細表示時にPlaces APIから取得
+- Place IDから営業時間・住所・位置・Google Mapsの評価と評価件数を取得し、写真を最大3枚表示（API設定が必要・本番環境は動作確認中）
 - 保存済みの緯度・経度とGoogle Maps APIキーがある場合の地図表示
 - 地図情報がない場合は、住所からGoogleマップを開くリンクを表示
 - お問い合わせフォーム（入力内容をメールアプリで送信）
 
-店舗情報はPostgreSQLの `ramen_shops` テーブルに保存します。初期データは `db/seeds.rb` で管理し、初期データの投入にGoogle APIキーは不要です。管理画面でGoogle Place IDを設定すると、詳細ページを開くたびにPlaces APIから営業時間・住所・位置を取得して表示します。APIから取得した情報はDBへ保存しません。
+店舗情報はPostgreSQLの `ramen_shops` テーブルに保存します。初期データは `db/seeds.rb` で管理し、初期データの投入にGoogle APIキーは不要です。詳細ページではPlace IDを使って営業時間・住所・位置・評価・評価件数を取得し、Google Mapsに登録された写真を最大3枚表示します。Google Places API (New)を有効にした `GOOGLE_PLACES_API_KEY` が必要です。Place IDを除くGoogle由来の詳細情報はデータベースに保存せず、詳細ページの表示時に取得します。
 
 ## 技術スタック
 
 - Ruby 3.3.3 / Ruby on Rails 7.1
 - PostgreSQL
-- Bootstrap 5
-- Docker Compose
+- HTML / SCSS / JavaScript / Bootstrap 5 / Vite
+- Active Storage（本番画像保存先: Fly.io Tigris）
+- Google Maps JavaScript API / Google Places API
+- Docker / Docker Compose
+- RSpec
+- Git / GitHub
 - Fly.io
 
 ## ローカルで起動する

@@ -36,7 +36,7 @@
     <div class="mb-3">
       <%= form.label :google_place_id, 'Google Place ID（任意）', class: 'form-label' %>
       <%= form.text_field :google_place_id, class: 'form-control', maxlength: 255, autocomplete: 'off' %>
-      <div class="form-text">設定すると、店舗詳細を開くたびにGoogleから営業時間・住所・位置を取得して表示します。緯度・経度の入力は不要です。取得内容はデータベースに保存しません。</div>
+      <div class="form-text">設定すると店舗詳細の表示時にGoogleから営業時間・住所・位置・評価・写真（最大3枚）を取得します。Place ID自体は保存し、取得した詳細情報や写真名は保存しません。詳細表示のたびにAPIを利用するため、利用料が発生する場合があります。</div>
     </div>
     <div class="mb-3">
       <%= form.label :image_url, '一覧画像URL', class: 'form-label' %>

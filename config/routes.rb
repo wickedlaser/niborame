@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :shoplist, only: %i[index show]
+  get 'shoplist/:id/place_photos/:token', to: 'shoplist#place_photo', as: :place_photo_shoplist
   get 'admin/login', to: 'admin_sessions#new', as: :admin_login
   post 'admin/login', to: 'admin_sessions#create'
   delete 'admin/logout', to: 'admin_sessions#destroy', as: :admin_logout

@@ -1,17 +1,114 @@
-body {
-  background-color: #f7f4f0;
-  color: #292722;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+// Shared page chrome; shop cards retain their existing layout and styling.
+:root {
+  --site-paper: #f6f7f7;
+  --site-ink: #20334e;
+  --site-muted: #4f5f72;
+  --site-line: #c8d0da;
+  --site-accent: #27466d;
 }
 
-.main-content {
-  min-height: 65vh;
-  padding: clamp(1.25rem, 3vw, 2.5rem);
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid #eee8e1;
-  border-radius: 1rem;
-  box-shadow: 0 0.75rem 2rem rgba(55, 39, 25, 0.07);
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: var(--site-paper);
+  color: var(--site-ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Noto Sans JP', 'Yu Gothic', Meiryo, sans-serif;
+  line-height: 1.7;
 }
+
+a { color: var(--site-accent); }
+a:hover { color: #182e4b; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #547caf;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  transform: translateY(-160%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+.site-header { border-bottom: 1px solid var(--site-line); }
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.site-brand { display: inline-flex; flex-direction: column; text-decoration: none; }
+.site-brand__name {
+  color: inherit;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.08rem;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.site-brand__caption {
+  margin-top: 0.3rem;
+  color: var(--site-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+.site-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
+.site-nav a {
+  padding: 0.6rem 0;
+  color: var(--site-ink);
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-underline-offset: 0.4em;
+}
+.site-nav a:hover, .site-nav a[aria-current='page'] { text-decoration: underline; }
+
+.main-content {
+  flex: 1;
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+.text-muted { color: var(--site-muted) !important; }
+
+.site-footer { padding: 2.75rem 0 1.25rem; background: #20334e; color: #f3f5f9; }
+.site-footer__main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+}
+.site-footer__description { margin: 0.75rem 0 0; color: #c3cddd; font-size: 0.9rem; }
+.site-footer__links { display: grid; grid-template-columns: auto auto; gap: 0.5rem 2rem; }
+.site-footer a { color: #edf2fa; }
+.site-footer__links a, .site-footer__bottom a {
+  display: inline-block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  text-underline-offset: 0.3em;
+}
+.site-footer a:hover { color: #fff; text-decoration: underline; }
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #50617a;
+  color: #c3cddd;
+  font-size: 0.8rem;
+}
+.site-footer__bottom a { color: #c3cddd; }
 
 .shoplist-page {
   max-width: 1200px;
@@ -24,7 +121,7 @@ body {
 
 .shoplist-eyebrow {
   margin-bottom: 0.4rem;
-  color: #9a4c32;
+  color: var(--site-accent);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -32,24 +129,26 @@ body {
 
 .shoplist-heading h1 {
   margin-bottom: 0.5rem;
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  font-weight: 750;
+  font-family: Georgia, 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .shoplist-heading > p:last-child {
   margin-bottom: 0;
-  color: #706b64;
+  color: var(--site-muted);
 }
 
 .shop-search-panel {
   padding: 1.25rem;
-  background: #faf7f2;
-  border: 1px solid #eee7dc;
+  background: #fff;
+  border: 1px solid var(--site-line);
   border-radius: 0.85rem;
 }
 
 .shop-search-panel .form-label {
-  color: #4d4841;
+  color: var(--site-ink);
   font-size: 0.9rem;
   font-weight: 650;
 }
@@ -57,17 +156,15 @@ body {
 .shop-search-panel .form-control,
 .shop-search-panel .form-select {
   min-height: 46px;
-  border-color: #d9d2c8;
+  border-color: #9ba8b8;
 }
 
-.btn-search,
 .btn-shop-detail {
   color: #fff;
   background: #8f422d;
   border-color: #8f422d;
 }
 
-.btn-search:hover,
 .btn-shop-detail:hover {
   color: #fff;
   background: #713321;
@@ -215,39 +312,6 @@ body {
   }
 }
 
-.navbar {
-  background-color: #444 !important; /* グレーの背景色 */
-  color: #fff !important; /* テキストの色を白に設定 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem 1rem;
-}
-
-.navbar-nav .nav-link {
-  color: #fff !important; /* ナビゲーションリンクの色を白に設定 */
-  padding: 10px 15px; /* パディングを追加 */
-  border-bottom: 2px solid transparent; /* 初期状態のボーダーを透明に */
-}
-
-.navbar-nav .nav-link:hover {
-  color: #ccc !important; /* ホバー時の色をライトグレーに設定 */
-  border-bottom: 2px solid #fff !important; /* ホバー時のボーダーを白に設定 */
-}
-
-.footer {
-  padding: 20px 0;
-  background-color: #222 !important; /* フッターの背景色をさらに濃い色に設定 */
-  color: #fff !important; /* フッターテキストの色を白に設定 */
-  text-align: center; /* テキストを中央揃えに設定 */
-}
-
-.footer a {
-  color: #bbb !important; /* フッターリンクの色をライトグレーに設定 */
-}
-
-.footer a:hover {
-  color: #fff !important; /* フッターリンクのホバー時の色を白に設定 */
-}
-
 .card {
   transition: transform 0.2s;
   border: 1px solid #ccc;
@@ -304,4 +368,44 @@ body {
 }
 .filter-button {
   margin-right: 10px;
+}
+
+.btn-search { color: #fff; background: var(--site-accent); border-color: var(--site-accent); }
+.btn-search:hover, .btn-search:focus-visible { color: #fff; background: #182e4b; border-color: #182e4b; }
+.btn-outline-secondary { color: var(--site-muted); border-color: #9ba8b8; }
+.form-control, .form-select { color: var(--site-ink); }
+.form-control::placeholder { color: var(--site-muted); opacity: 1; }
+
+.home-genre-filter { max-width: 25rem; margin-bottom: 1.75rem; }
+.shop-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--site-line);
+}
+.shop-header h1 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.25rem); }
+.shop-detail-content { max-width: 960px; margin: 0 auto; }
+.shop-map { height: 400px; }
+.shop-section { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--site-line); }
+.shop-section:last-child { border-bottom: 0; margin-bottom: 0; }
+.shop-section h5 { margin-bottom: 0.75rem; color: var(--site-ink); }
+.shop-introduction p, .shop-business-hours__text { white-space: pre-wrap; }
+.shop-image-container { text-align: center; }
+
+@media (max-width: 575.98px) {
+  .site-header__inner { gap: 1rem; align-items: flex-start; padding-top: 1.25rem; padding-bottom: 1.25rem; }
+  .site-brand__name { font-size: 2rem; }
+  .site-brand__caption { font-size: 0.65rem; letter-spacing: 0.06em; }
+  .site-nav { flex-direction: column; gap: 0; flex-shrink: 0; }
+  .site-nav a { font-size: 0.8rem; min-height: 44px; }
+  .main-content { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .site-footer .container { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .site-footer__main { flex-direction: column; gap: 1.5rem; }
+  .site-footer__links { column-gap: 1.5rem; font-size: 0.85rem; }
+  .site-footer__links a, .site-footer__bottom a { min-height: 44px; }
+  .shop-map { height: 300px; }
 }
